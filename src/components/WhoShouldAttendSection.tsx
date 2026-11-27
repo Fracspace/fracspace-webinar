@@ -12,8 +12,8 @@ export const WhoShouldAttendSection: React.FC = () => {
     <section className="py-24 sm:py-28 px-6 bg-[#FFF8EF]">
       <div className="max-w-[1200px] mx-auto flex flex-col gap-9">
         {/* Section Header */}
-        <div className="flex flex-col gap-3.5">
-          <span className="self-start inline-flex px-4 py-2 rounded-full bg-[#FFF1DD] text-xs font-semibold tracking-wider uppercase text-[#B45309]">
+        <div className="flex flex-col items-center text-center gap-3.5">
+          <span className="inline-flex px-4 py-2 rounded-full bg-[#FFF1DD] text-xs font-semibold tracking-wider uppercase text-[#B45309]">
             Who should attend
           </span>
 
@@ -23,7 +23,7 @@ export const WhoShouldAttendSection: React.FC = () => {
         </div>
 
         {/* Checklist Card */}
-        <div className="max-w-[900px] bg-white rounded-[24px] border border-[#EFE6D8] p-6 sm:p-9 flex flex-col gap-5 shadow-[0_16px_40px_rgba(27,22,64,0.06)]">
+        <div className="w-full max-w-[900px] mx-auto bg-white rounded-[24px] border border-[#EFE6D8] p-6 sm:p-9 flex flex-col gap-5 shadow-[0_16px_40px_rgba(27,22,64,0.06)]">
           <strong className="font-outfit font-semibold text-xl sm:text-[22px] text-[#1B1640]">
             This session is for you if you:
           </strong>
