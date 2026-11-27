@@ -44,9 +44,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Amount comes strictly from server environment variable
+    // Amount comes strictly from server environment variable (temporarily defaulting to 1 INR for production testing)
     const configuredPrice = process.env.WEBINAR_PRICE_INR;
-    const amountInr = configuredPrice ? parseFloat(configuredPrice) : 99.0;
+    const amountInr = configuredPrice ? parseFloat(configuredPrice) : 1.0;
 
     if (isNaN(amountInr) || amountInr <= 0) {
       console.error("Invalid WEBINAR_PRICE_INR configured:", configuredPrice);
