@@ -120,10 +120,15 @@ export const ReserveSeatSection: React.FC = () => {
             <ArrowRight className="w-5 h-5 stroke-[2.5]" aria-hidden="true" />
           </button>
 
-          <span className="flex items-center justify-center gap-2 text-xs text-[#5B5670]">
-            <ShieldCheck className="w-4 h-4 text-[#5B5670] stroke-[2]" />
-            Secure payment via Cashfree · Takes under a minute
-          </span>
+          <div className="flex flex-col items-center gap-1 text-center">
+            <span className="flex items-center justify-center gap-2 text-xs text-[#5B5670]">
+              <ShieldCheck className="w-4 h-4 text-[#5B5670] stroke-[2] flex-none" />
+              Secure payment via Cashfree · Takes under a minute
+            </span>
+            <span className="text-[11px] font-medium text-[#5B5670]">
+              Co-powered by <strong className="text-[#1B1640]">Dreamscape Hotels &amp; Resorts</strong>
+            </span>
+          </div>
         </div>
       </div>
     </section>

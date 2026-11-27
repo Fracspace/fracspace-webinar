@@ -26,16 +26,12 @@ export const LiveQaSection: React.FC = () => {
             your family's dining table.
           </p>
 
-          <p className="m-0 text-sm sm:text-[15px] font-semibold text-[#1B1640]">
-            You can send your question while registering, and we'll try to answer it during the session.
-          </p>
-
           <button
             type="button"
             onClick={openModal}
             className="lp-cta self-start inline-flex items-center gap-2.5 min-h-[58px] px-8 rounded-2xl bg-[#F59E0B] text-[#1B1640] font-outfit font-semibold text-lg shadow-[0_14px_34px_rgba(245,158,11,0.3)] cursor-pointer border-none mt-2"
           >
-            Register and Ask Your Question
+            Reserve Your Seat
             <ArrowRight className="w-5 h-5 stroke-[2.5]" aria-hidden="true" />
           </button>
         </div>

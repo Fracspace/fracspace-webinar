@@ -35,9 +35,14 @@ export const PressSection: React.FC = () => {
         {/* 7 Press Logos Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3 w-full pt-2">
           {PRESS_LOGOS.map((press, idx) => (
-            <div
+            <a
               key={idx}
-              className="bg-white rounded-2xl h-[84px] flex items-center justify-center p-3.5 shadow-sm transition-transform hover:-translate-y-1"
+              href={press.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={press.name}
+              aria-label={`Read feature on ${press.name}`}
+              className="bg-white rounded-2xl h-[84px] flex items-center justify-center p-3.5 shadow-sm transition-transform hover:-translate-y-1 hover:shadow-md cursor-pointer"
             >
               <Image
                 src={press.image}
@@ -46,7 +51,7 @@ export const PressSection: React.FC = () => {
                 height={press.maxHeight}
                 className="max-h-[46px] max-w-full w-auto object-contain block"
               />
-            </div>
+            </a>
           ))}
         </div>
 

@@ -34,4 +34,5 @@ export interface PressLogo {
   name: string;
   image: string;
   maxHeight: number;
+  link: string;
 }

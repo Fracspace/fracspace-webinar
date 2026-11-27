@@ -3,8 +3,8 @@ import { WebinarConfig, TopicItem, FaqItem, PressLogo } from "@/types/webinar";
 export const WEBINAR_CONFIG: WebinarConfig = {
   price: "₹99",
   eventDate: "Sunday, Dec 13",
-  eventTime: "11:00 AM IST",
-  startsAt: "2026-12-13T11:00:00+05:30",
+  eventTime: "6:00 PM IST",
+  startsAt: "2026-12-13T18:00:00+05:30",
   seats: "100",
   paymentLink: "#register",
   whatsappLink: "https://wa.me/919880626111",
@@ -19,10 +19,9 @@ export const WEBINAR_CONFIG: WebinarConfig = {
   hostName: "Unnath Reddy",
   hostTitle: "Founder & Managing Director, Fracspace",
   hostBio:
-    "Unnath founded Fracspace to make holiday-home ownership possible for families who would never buy a whole second home. Fracspace offers fractions of holiday properties starting at ₹10 lakh and manages them end to end, from guest bookings and housekeeping to owner reporting. In this session he shares how Fracspace thinks about structuring, running and exiting a fractional property, and answers your questions live.",
+    "Unnath founded Fracspace to make holiday-home ownership possible for families who would never buy a whole second home. Fracspace offers fractions of holiday properties starting at ₹10 lakh and manages them end to end, from guest bookings and housekeeping to owner reporting.",
   hostBadges: [
     "8+ years in real estate",
-    "100+ properties / owners",
     "Forbes India DGEMS 2024 · Top 200",
   ],
 };
@@ -106,36 +105,43 @@ export const PRESS_LOGOS: PressLogo[] = [
     name: "Deccan Chronicle",
     image: "/assets/a3ac4cfe9f68229921f133b5b99acd7e.png",
     maxHeight: 42,
+    link: "https://www.deccanchronicle.com/general/fracspace-revolutionizes-real-estate-ownership-with-mobile-app-897133",
   },
   {
     name: "The Enterprise World",
     image: "/assets/c0b3acb6c55694f44182b594e75cd696.png",
     maxHeight: 36,
+    link: "https://theenterpriseworld.com/unnath-reddy-a-visionary-leader-reforming/",
   },
   {
     name: "ET Now",
     image: "/assets/01f553b259f79a8204c0523c1cd3a6ba.png",
     maxHeight: 52,
+    link: "https://www.youtube.com/watch?v=Z1JVsH6AwDI",
   },
   {
     name: "ET Edge Insights",
     image: "/assets/bdd55b4b7db80c90946b8556ea106923.png",
     maxHeight: 40,
+    link: "https://etedge-insights.com/in-focus/trending/fracspace-launches-in-app-features-for-interiors-and-real-estate-enthusiasts-in-hyderabad-and-bangalore/",
   },
   {
     name: "Bizz Buzz",
     image: "/assets/cfa67e83da63411b3c31ed7bd16fcd20.png",
     maxHeight: 42,
+    link: "https://www.bizzbuzz.news/industry/fracspace-allows-fractional-ownership-of-properties-1212346",
   },
   {
     name: "Entrepreneurs Today",
     image: "/assets/3055bc4d20c05a4f00bb18d7af0439de.png",
     maxHeight: 52,
+    link: "https://entrepreneurstoday.in/unnath-reddys-fracspace-revolutionizing-real-estate-investment-and-empowering-dreams/",
   },
   {
     name: "Around Telugu",
     image: "/assets/27d3292361c6b231ac5ae2e4ef8aa473.png",
     maxHeight: 52,
+    link: "https://youtu.be/DMCjEC1BQQE?si=DjmgtonohyGQfboG",
   },
 ];
 
@@ -161,7 +167,7 @@ export const FAQS: FaqItem[] = [
   {
     question: "Will there be a recording?",
     answer:
-      "Yes, shared in the WhatsApp community. We recommend joining live so you can ask questions.",
+      "No, a recording is not provided. This is a live-only session, so please join on time to attend.",
   },
   {
     question: "Do I need to know anything about real estate?",
@@ -169,19 +175,9 @@ export const FAQS: FaqItem[] = [
       "No. The session is designed for families with no prior knowledge of fractional ownership.",
   },
   {
-    question: "Will I be pressured to buy?",
-    answer:
-      "No. This is an educational session. You'll learn what questions to ask about any fractional property, not just ours.",
-  },
-  {
     question: "Can NRIs attend?",
     answer:
       "Yes. The session is online, and NRIs can ask questions about eligibility and paperwork during the Q&A.",
-  },
-  {
-    question: "What is the minimum investment with Fracspace?",
-    answer:
-      "Fracspace fractions start at ₹10 lakh. Exact amounts depend on the property.",
   },
   {
     question: "Can I bring my spouse or family?",

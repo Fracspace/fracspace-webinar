@@ -222,6 +222,22 @@ function RegistrationFormInner({
             />
           </div>
 
+          {/* Highlighted Payment Partner Notice */}
+          <div className="p-3.5 rounded-xl bg-[#FEF3C7]/70 border-2 border-[#F59E0B] flex items-start gap-3">
+            <ShieldCheck className="w-5 h-5 text-[#B45309] stroke-[2.4] flex-none mt-0.5" />
+            <div className="flex flex-col gap-0.5">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#92400E]">
+                Co-powered by
+              </span>
+              <strong className="font-outfit font-bold text-base sm:text-[17px] leading-tight text-[#1B1640]">
+                Dreamscape Hotels &amp; Resorts
+              </strong>
+              <span className="text-xs leading-snug text-[#4B465C] mt-0.5">
+                Your checkout &amp; payment receipt will appear under this name.
+              </span>
+            </div>
+          </div>
+
           {/* Submit Button */}
           <button
             type="submit"
@@ -239,7 +255,7 @@ function RegistrationFormInner({
           </button>
 
           <span className="flex items-center justify-center gap-1.5 text-xs text-[#5B5670]">
-            <ShieldCheck className="w-4 h-4 text-[#5B5670] stroke-[2]" />
+            <ShieldCheck className="w-4 h-4 text-[#5B5670] stroke-[2] flex-none" />
             Secure payment via Cashfree · UPI, cards and net banking accepted
           </span>
 

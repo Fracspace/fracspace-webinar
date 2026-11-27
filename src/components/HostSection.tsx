@@ -20,11 +20,12 @@ export const HostSection: React.FC = () => {
           />
           <div className="relative aspect-[4/5] rounded-[28px] overflow-hidden shadow-[0_30px_60px_rgba(27,22,64,0.18)]">
             <Image
-              src="/assets/9b3180d1ae7e6f9ffbae9c0efc461d95.jpg"
+              src="/assets/unnath-host.jpg"
               alt="Unnath Reddy speaking at an event"
               fill
+              unoptimized
               sizes="(max-width: 640px) 100vw, 420px"
-              className="object-cover object-[center_20%]"
+              className="object-cover object-[center_15%]"
             />
           </div>
         </div>

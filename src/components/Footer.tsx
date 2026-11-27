@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { WEBINAR_CONFIG } from "@/config/webinar";
 
 export const Footer: React.FC = () => {
   return (
@@ -23,6 +22,8 @@ export const Footer: React.FC = () => {
           <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs sm:text-[13px] text-[#CFC8E3]">
             <span>© 2026 Fracspace</span>
             <span>·</span>
+            <span>Co-powered by Dreamscape Hotels &amp; Resorts</span>
+            <span>·</span>
             <Link
               href="https://www.fracspace.com/"
               className="hover:text-white transition-colors underline-offset-2 hover:underline"
@@ -31,25 +32,18 @@ export const Footer: React.FC = () => {
             </Link>
             <span>·</span>
             <Link
-              href="https://www.fracspace.com/"
+              href="/privacy-policy"
               className="hover:text-white transition-colors underline-offset-2 hover:underline"
             >
               Privacy Policy
             </Link>
             <span>·</span>
             <Link
-              href="https://www.fracspace.com/"
+              href="/terms"
               className="hover:text-white transition-colors underline-offset-2 hover:underline"
             >
               Terms
             </Link>
-            <span>·</span>
-            <a
-              href={`mailto:${WEBINAR_CONFIG.contactEmail}`}
-              className="hover:text-white transition-colors underline-offset-2 hover:underline"
-            >
-              Contact
-            </a>
           </div>
         </div>
       </div>

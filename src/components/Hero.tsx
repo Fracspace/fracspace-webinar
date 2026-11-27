@@ -79,12 +79,13 @@ export const Hero: React.FC = () => {
               {/* Card Photo Header */}
               <div className="relative -m-6 mb-0 aspect-[16/11] overflow-hidden rounded-t-[24px]">
                 <Image
-                  src="/assets/9b3180d1ae7e6f9ffbae9c0efc461d95.jpg"
+                  src="/assets/unnath-host.jpg"
                   alt="Unnath Reddy speaking at an event"
                   fill
                   priority
+                  unoptimized
                   sizes="(max-width: 640px) 100vw, 440px"
-                  className="object-cover object-[center_22%]"
+                  className="object-cover object-[center_16%]"
                 />
                 <div
                   aria-hidden="true"
