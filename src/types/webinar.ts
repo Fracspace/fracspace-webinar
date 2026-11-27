@@ -16,8 +16,6 @@ export interface WebinarConfig {
   hostTitle: string;
   hostBio: string;
   hostBadges: string[];
-  extraInclude: string;
-  feeAdjust: string;
 }
 
 export interface TopicItem {

@@ -25,8 +25,6 @@ export const WEBINAR_CONFIG: WebinarConfig = {
     "100+ properties / owners",
     "Forbes India DGEMS 2024 · Top 200",
   ],
-  extraInclude: "Recording of the session & due-diligence checklist",
-  feeAdjust: "Fully adjusted against your first Fracspace purchase",
 };
 
 export const NINE_TOPICS: TopicItem[] = [

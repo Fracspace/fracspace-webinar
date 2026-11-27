@@ -58,8 +58,6 @@ export const ReserveSeatSection: React.FC = () => {
               {[
                 "A live seat in the 55-minute session with Unnath",
                 "Access to the private WhatsApp community for registrants",
-                "A chance to send your question in advance",
-                WEBINAR_CONFIG.extraInclude,
               ].map((item, idx) => (
                 <li key={idx} className="flex gap-3 items-start text-sm sm:text-[15px] text-[#EDE7F6]">
                   <Check className="w-5 h-5 text-[#FCD34D] stroke-[2.5] flex-none mt-0.5" />
@@ -68,10 +66,6 @@ export const ReserveSeatSection: React.FC = () => {
               ))}
             </ul>
           </div>
-
-          <span className="text-sm font-medium text-[#FCD34D] pt-1">
-            {WEBINAR_CONFIG.feeAdjust}
-          </span>
         </div>
 
         {/* Right Column: Floating Reservation Card */}
