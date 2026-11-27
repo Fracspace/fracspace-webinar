@@ -77,7 +77,7 @@ export const Hero: React.FC = () => {
             {/* Right Column: Speaker & Countdown Card */}
             <div className="flex-1 basis-[360px] max-w-[440px] min-w-0 rounded-[24px] bg-white/10 border border-white/20 backdrop-blur-md p-6 overflow-hidden flex flex-col gap-4 shadow-2xl">
               {/* Card Photo Header */}
-              <div className="relative -m-6 mb-0 aspect-[16/11] overflow-hidden rounded-t-[24px]">
+              <div className="relative -m-6 mb-0 aspect-[5/4] overflow-hidden rounded-t-[24px]">
                 <Image
                   src="/assets/unnath-host.jpg"
                   alt="Unnath Reddy speaking at an event"
@@ -85,7 +85,7 @@ export const Hero: React.FC = () => {
                   priority
                   unoptimized
                   sizes="(max-width: 640px) 100vw, 440px"
-                  className="object-cover object-[center_16%]"
+                  className="object-cover object-[center_18%]"
                 />
                 <div
                   aria-hidden="true"

@@ -13,19 +13,19 @@ export const HostSection: React.FC = () => {
     <section id="host" className="py-24 sm:py-28 px-6 bg-[#FFF8EF]">
       <div className="max-w-[1100px] mx-auto flex flex-wrap gap-12 sm:gap-14 items-center">
         {/* Left Column: Speaker Image with offset backdrop */}
-        <div className="flex-1 basis-[340px] max-w-[420px] min-w-0 relative">
+        <div className="flex-1 basis-[300px] max-w-[350px] min-w-0 relative mx-auto lg:mx-0">
           <div
             aria-hidden="true"
-            className="absolute inset-y-6 -inset-x-6 sm:inset-y-6 sm:-inset-x-6 rounded-[28px] bg-[#FDE7C4] pointer-events-none"
+            className="absolute inset-y-5 -inset-x-5 rounded-[24px] bg-[#FDE7C4] pointer-events-none"
           />
-          <div className="relative aspect-[4/5] rounded-[28px] overflow-hidden shadow-[0_30px_60px_rgba(27,22,64,0.18)]">
+          <div className="relative aspect-[3/4] rounded-[24px] overflow-hidden shadow-[0_24px_50px_rgba(27,22,64,0.16)]">
             <Image
               src="/assets/unnath-host.jpg"
               alt="Unnath Reddy speaking at an event"
               fill
               unoptimized
-              sizes="(max-width: 640px) 100vw, 420px"
-              className="object-cover object-[center_15%]"
+              sizes="(max-width: 640px) 100vw, 350px"
+              className="object-cover object-top"
             />
           </div>
         </div>
