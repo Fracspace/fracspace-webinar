@@ -36,19 +36,25 @@ export interface CashfreePayment {
 }
 
 function getCashfreeConfig() {
-  const env = process.env.CASHFREE_ENV || "sandbox";
-  const baseUrl =
-    env === "production"
-      ? "https://api.cashfree.com/pg"
-      : "https://sandbox.cashfree.com/pg";
-
-  const appId = process.env.CASHFREE_APP_ID;
-  const secretKey = process.env.CASHFREE_SECRET_KEY;
-  const apiVersion = process.env.CASHFREE_API_VERSION || "2025-01-01";
+  const appId = process.env.CASHFREE_APP_ID?.trim();
+  const secretKey = process.env.CASHFREE_SECRET_KEY?.trim();
+  const apiVersion = (process.env.CASHFREE_API_VERSION || "2025-01-01").trim();
 
   if (!appId || !secretKey) {
     throw new Error("Missing CASHFREE_APP_ID or CASHFREE_SECRET_KEY in environment variables.");
   }
+
+  const env = (
+    process.env.CASHFREE_ENV ||
+    (secretKey.startsWith("cfsk_ma_prod_") ? "production" : "sandbox")
+  )
+    .trim()
+    .toLowerCase();
+
+  const baseUrl =
+    env === "production"
+      ? "https://api.cashfree.com/pg"
+      : "https://sandbox.cashfree.com/pg";
 
   return {
     baseUrl,

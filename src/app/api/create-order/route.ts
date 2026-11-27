@@ -57,7 +57,10 @@ export async function POST(request: NextRequest) {
     }
 
     const webinarSlug = process.env.WEBINAR_SLUG || "fracspace-webinar";
-    const siteUrl = (process.env.SITE_URL || "http://localhost:3000").replace(/\/$/, "");
+    const siteUrl = (
+      process.env.SITE_URL ||
+      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")
+    ).replace(/\/$/, "");
 
     // 1. Create Pending Registration in database
     const registrationId = await createPendingRegistration({
