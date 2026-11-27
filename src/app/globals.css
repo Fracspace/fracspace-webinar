@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-outfit: Outfit, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+
+body {
+  margin: 0;
+  background-color: #FFFFFF;
+  color: #1B1640;
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Primary CTA Button effects */
+.lp-cta {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
+}
+
+.lp-cta:hover {
+  transform: translateY(-2px);
+  background-color: #FBBF24 !important;
+}
+
+.lp-field:focus {
+  outline: 3px solid #F59E0B;
+  outline-offset: 1px;
+}
+
+/* Accordion chevron animation */
+details.lp-acc summary::-webkit-details-marker {
+  display: none;
+}
+
+details.lp-acc[open] .lp-chev {
+  transform: rotate(180deg);
+}
+
+/* Hover lift */
+.lp-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lp-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 60px rgba(27, 22, 64, 0.16);
+}
+
+/* Ticking seconds pulse animation */
+@keyframes lpTick {
+  0% { transform: scale(1); }
+  12% { transform: scale(1.08); }
+  30% { transform: scale(1); }
+}
+
+.lp-tick {
+  animation: lpTick 1s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-tick {
+    animation: none;
+  }
+}
