@@ -46,7 +46,8 @@ export async function sendConfirmationEmail({
   name,
   webinarTitle = process.env.WEBINAR_TITLE || "Can You Own a Holiday Home in Parts?",
   webinarDate = process.env.WEBINAR_DATE || "Upcoming Webinar",
-  communityLink = process.env.WHATSAPP_COMMUNITY_LINK || "",
+  communityLink = process.env.WHATSAPP_COMMUNITY_LINK ||
+    "https://chat.whatsapp.com/F1plK69ahDzGdGWuaJhnnG",
   amountInr,
   orderId,
 }: SendEmailParams): Promise<void> {

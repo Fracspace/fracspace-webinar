@@ -17,9 +17,9 @@ export async function POST(request: NextRequest) {
 
     const { orderId } = body;
 
-    // Check configured expected price
+    // Check configured expected price (temporarily defaulting to 1 INR for production testing)
     const configuredPrice = process.env.WEBINAR_PRICE_INR;
-    const expectedAmount = configuredPrice ? parseFloat(configuredPrice) : 99.0;
+    const expectedAmount = configuredPrice ? parseFloat(configuredPrice) : 1.0;
 
     // 1. Check with Cashfree API directly (never trust the browser)
     const payment = await getSuccessfulPayment(orderId, expectedAmount);
@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    // 2. Mark registration paid and send WhatsApp message once
+    // 2. Mark registration paid and send WhatsApp/Email notifications once
     await markPaidAndNotify({
       orderId,
       paymentId: payment.cf_payment_id,
@@ -39,7 +39,9 @@ export async function POST(request: NextRequest) {
     // 3. Return confirmation and community link
     return NextResponse.json({
       paid: true,
-      communityLink: process.env.WHATSAPP_COMMUNITY_LINK || "",
+      communityLink:
+        process.env.WHATSAPP_COMMUNITY_LINK ||
+        "https://chat.whatsapp.com/F1plK69ahDzGdGWuaJhnnG",
     });
   } catch (error: unknown) {
     console.error("Payment verification error:", error);
