@@ -134,3 +134,56 @@ export async function sendConfirmationEmail({
     html: htmlContent,
   });
 }
+
+/**
+ * Sends a 6-digit login OTP to the authorized admin email address.
+ */
+export async function sendAdminOtpEmail({
+  email,
+  otp,
+}: {
+  email: string;
+  otp: string;
+}): Promise<void> {
+  const transporter = getTransporter();
+
+  if (!transporter) {
+    throw new Error(
+      "SMTP credentials (SMTP_HOST, SMTP_USER, SMTP_PASS) are not configured on the server."
+    );
+  }
+
+  const fromAddress =
+    process.env.SMTP_FROM || `Fracspace Webinar <${process.env.SMTP_USER}>`;
+
+  const htmlContent = `
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; background:#f7f6fb; padding:24px; color:#1B1640;">
+  <div style="max-width:480px; margin:0 auto; background:#ffffff; border-radius:16px; padding:32px; border:1px solid #EFE6D8;">
+    <p style="margin:0 0 8px; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:#B45309;">
+      Fracspace Webinar Admin
+    </p>
+    <h1 style="margin:0 0 12px; font-size:22px; color:#1B1640;">Your Login OTP</h1>
+    <p style="margin:0 0 20px; font-size:14px; color:#5B5670; line-height:1.6;">
+      Use the 6-digit verification code below to sign in to the Fracspace Webinar Admin Dashboard. This code expires in 10 minutes.
+    </p>
+    <div style="background:#FFF8EF; border:2px solid #F59E0B; border-radius:12px; padding:18px; text-align:center; margin-bottom:20px;">
+      <span style="font-size:32px; font-weight:800; letter-spacing:0.25em; color:#1B1640;">${otp}</span>
+    </div>
+    <p style="margin:0; font-size:12px; color:#7A7593;">
+      If you did not request this login code, you can safely ignore this email.
+    </p>
+  </div>
+</body>
+</html>
+  `;
+
+  await transporter.sendMail({
+    from: fromAddress,
+    to: email,
+    subject: `${otp} is your Fracspace Admin login OTP`,
+    html: htmlContent,
+  });
+}

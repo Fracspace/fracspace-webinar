@@ -187,3 +187,15 @@ export async function recordEmailError(id: string, error: string): Promise<void>
     console.warn(`Could not record Email error for ${id}:`, err);
   }
 }
+
+/**
+ * Fetches all webinar registrations ordered by newest first for the admin dashboard.
+ */
+export async function getAllRegistrations(): Promise<RegistrationRow[]> {
+  const rows = await sql<RegistrationRow[]>`
+    SELECT *
+    FROM public.webinar_registrations
+    ORDER BY created_at DESC
+  `;
+  return rows;
+}
